@@ -1,0 +1,5 @@
+file(GLOB SOURCES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+file(GLOB HEADERS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+include_directories(..)
+add_executable(player ${SOURCES} ${HEADERS})
+target_link_libraries(player zlib libswf)

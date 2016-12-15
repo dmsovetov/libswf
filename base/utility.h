@@ -96,32 +96,38 @@ void	operator delete[](void* ptr);
 // some misc handy math functions
 //
 
+#if 0
 inline int64	i64abs(int64 i) { if (i < 0) return -i; else return i; }
 inline int	iabs(int i) { if (i < 0) return -i; else return i; }
-inline int	imax(int a, int b) { if (a < b) return b; else return a; }
 inline float	fmax(float a, float b) { if (a < b) return b; else return a; }
-inline int	imin(int a, int b) { if (a < b) return a; else return b; }
+
 inline float	fmin(float a, float b) { if (a < b) return a; else return b; }
 
 
-inline int	iclamp(int i, int min, int max) {
-	assert( min <= max );
-	return imax(min, imin(i, max));
-}
 
-inline float	fclamp(float f, float xmin, float xmax) {
-	assert( xmin <= xmax );
-	return fmax(xmin, fmin(f, xmax));
-}
 
-inline float flerp(float a, float b, float f) { return (b - a) * f + a; }
+
+
 
 const float LN_2 = 0.693147180559945f;
 inline float	log2(float f) { return logf(f) / LN_2; }
 
+
+
+#endif
+inline float flerp(float a, float b, float f) { return (b - a) * f + a; }
 inline int	fchop( float f ) { return (int) f; }	// replace w/ inline asm if desired
 inline int	frnd(float f) { return fchop(f + 0.5f); }	// replace with inline asm if desired
-
+inline int	imax(int a, int b) { if (a < b) return b; else return a; }
+inline float	fclamp(float f, float xmin, float xmax) {
+	assert( xmin <= xmax );
+	return fmax(xmin, fmin(f, xmax));
+}
+inline int	imin(int a, int b) { if (a < b) return a; else return b; }
+inline int	iclamp(int i, int min, int max) {
+	assert( min <= max );
+	return imax(min, imin(i, max));
+}
 
 // Handy macro to quiet compiler warnings about unused parameters/variables.
 #define UNUSED(x) (void) (x)
