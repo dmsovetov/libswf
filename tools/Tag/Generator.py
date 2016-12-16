@@ -1,8 +1,8 @@
 import sys
 
-sys.path.append( "../../../tools/scripts/" )
+#sys.path.append( "../../../tools/scripts/" )
 
-from Template import Template
+#from Template import Template
 
 # class Generator
 class Generator:

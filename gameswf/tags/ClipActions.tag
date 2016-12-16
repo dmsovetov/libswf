@@ -1,7 +1,7 @@
 {
 	u16					reserved
 	ClipEventFlags		allEventFlags
-	ClipActionRecord[]	clipActionRecords
+	ClipActionRecord:*	clipActionRecords
 
 	if version <= 5 {
 		u16				clipActionEndFlag

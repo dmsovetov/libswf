@@ -3,6 +3,23 @@ import tokenize
 from Type  import Type
 from Field import Field
 
+
+def tokenize(file_name):
+    """Performs a text file tokenization"""
+
+    tokens = []
+
+    def handle_token(type, token, (srow, scol), (erow, ecol), line):
+        if tokenize.tok_name[type] == 'NL':
+            return
+
+        tokens.append(token)
+
+    with open(file_name) as fh:
+        tokenize.tokenize(file.readline, handle_token)
+
+    return tokens
+
 # class Parser
 class Parser:
     # ctor

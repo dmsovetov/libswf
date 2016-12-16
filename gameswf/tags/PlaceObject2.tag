@@ -1,14 +1,12 @@
 {
-	header = 26
-
-	ub[1]	placeFlagHasClipActions
-	ub[1]	placeFlagHasClipDepth
-	ub[1]	placeFlagHasName
-	ub[1]	placeFlagHasRatio
-	ub[1]	placeFlagHasColorTransform
-	ub[1]	placeFlagHasMatrix
-	ub[1]	placeFlagHasCharacter
-	ub[1]	placeFlagHasMove
+	ub:1	placeFlagHasClipActions
+	ub:1	placeFlagHasClipDepth
+	ub:1	placeFlagHasName
+	ub:1	placeFlagHasRatio
+	ub:1	placeFlagHasColorTransform
+	ub:1	placeFlagHasMatrix
+	ub:1	placeFlagHasCharacter
+	ub:1	placeFlagHasMove
 
 	u16		depth
 

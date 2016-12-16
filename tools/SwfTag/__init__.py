@@ -1,1 +1,0 @@
-from SwfTag import SwfTag
